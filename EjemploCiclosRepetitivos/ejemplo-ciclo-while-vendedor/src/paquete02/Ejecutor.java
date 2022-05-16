@@ -24,6 +24,7 @@ public class Ejecutor {
         cadenaFinal = ""; // inicializo la variable que contendrá la cadena
         // final.
         while (bandera) { // bandera == true
+            cadenaFinal = "";
             System.out.println("Ingrese el nombre del vendedor");
             nombre = entrada.nextLine();
             System.out.println("Ingrese edad del vendedor");
@@ -36,12 +37,7 @@ public class Ejecutor {
             // con los datos ingresados se crea el objeto de tipo Vendedor
             Vendedor v = new Vendedor(nombre, edad, sMinino, autos);
             v.calcularPagoMensual();
-            cadenaFinal = String.format("%sDatos de Vendedor\n"
-                    + "Nombre: %s\n"
-                    + "Edad: %s\n"
-                    + "Salario mínimo: %.2f\n"
-                    + "Número de autos: %d\n"
-                    + "Pago mensual: %.2f\n\n",
+            cadenaFinal = String.format("%s%s\n", 
                     cadenaFinal,
                     v.obtenerNombres(), v.obtenerEdad(),
                     v.obtenerSalarioMinimo(), v.obtenerNumeroAutos(),
@@ -54,6 +50,7 @@ public class Ejecutor {
             if (opcion.equals("n")) {
                 bandera = false;
             }
+            
 
         }
         // cuando se sale del ciclo repetitivo debemos presentar en pantalla

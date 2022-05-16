@@ -22,6 +22,7 @@ public class Ejecutor {
         // Inicio de proceso iterativo 
         bandera = true;
         while (bandera) { // bandera == true
+            System.out.println("....................................");
             System.out.println("Ingrese el nombre del vendedor");
             nombre = entrada.nextLine();
             System.out.println("Ingrese edad del vendedor");
@@ -30,6 +31,7 @@ public class Ejecutor {
             sMinino = entrada.nextDouble();
             System.out.println("Ingrese el número de autos vendidos");
             autos = entrada.nextInt();
+            System.out.println("..................................\n");
 
             // con los datos ingresados se crea el objeto de tipo Vendedor
             Vendedor v = new Vendedor(nombre, edad, sMinino, autos);
@@ -44,6 +46,7 @@ public class Ejecutor {
                     v.obtenerPagoMensual());
 
             entrada.nextLine(); // limpieza del buffer
+            System.out.println("...............................................");
             System.out.println("Desea ingresar más vendedores. Ingrese n para"
                     + "salir");
             opcion = entrada.nextLine();
